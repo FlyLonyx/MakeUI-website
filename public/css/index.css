@@ -46,6 +46,7 @@ body {
   width: 100%;
   top: 0;
   z-index: 10;
+  box-shadow: rgba(149, 157, 165, 0.112) 0px 2px 10px;
 }
 
 .logo {
