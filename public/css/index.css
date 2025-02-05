@@ -7,10 +7,33 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-100);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-100);
+  border-radius: 10px;
+  border: 2px solid var(--background-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-200);
+}
+
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-100);
   color: var(--text-300);
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
