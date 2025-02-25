@@ -32,14 +32,6 @@ function textTyppingEffect(element, text, i = 0) {
     setTimeout(() => textTyppingEffect(element, text, i + 1), 50);
 }
 
-// Appliquer les styles de h1 à l'élément texte généré
-heroText.style.fontSize = '50px';
-heroText.style.fontWeight = '800';
-heroText.style.lineHeight = '1.4';
-heroText.style.maxWidth = '35vw';
-heroText.style.color = 'var(--text-300)';
-heroText.style.animation = 'fadeIn 1s ease-out forwards';
-heroText.style.animationDelay = '0.5s';
 
 // Ajouter la classe important pour le mot "important"
 const style = document.createElement('style');
