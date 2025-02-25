@@ -66,3 +66,22 @@ document.addEventListener('click', (e) => {
     }
 });
 
+document.getElementById("hero-button").addEventListener("click", function() {
+    const buttonText = this.querySelector(".button-text");
+    const loader = this.querySelector(".loader");
+  
+    this.classList.add("clicked");
+    buttonText.style.display = "none";
+    loader.style.display = "block";
+
+    setTimeout(() => {
+      setTimeout(() => {
+        buttonText.innerText = "DECOUVRIR";
+        buttonText.style.display = "block";
+        loader.style.display = "none";
+        this.classList.remove("clicked");
+      }, 1000);
+    }, 300);
+  });
+  
+

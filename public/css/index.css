@@ -109,7 +109,6 @@ body {
 .primary {
   background-color: var(--primary-300);
   color: white;
-
 }
 
 .primary:hover {
@@ -200,8 +199,41 @@ body {
   height: 4em;
   font-size: 18px;
   border-radius: 12px;
+  position: relative;
+  overflow: hidden;
   transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
 }
+
+.hero-button.clicked:hover {
+  background-color: transparent;
+  color: var(--primary-300);
+}
+
+.hero-button.clicked {
+  background-color: transparent;
+  color: var(--primary-300);
+}
+
+.loader {
+  position: absolute;
+  border: 3px solid var(--primary-300);
+  border-radius: 50%;
+  border-top: 4px solid transparent;
+  width: 2em;
+  height: 2em;
+  animation: spin 1s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
 
 .hero-right {
   display: flex;
