@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="css/utils/buttons.css">
   <link rel="stylesheet" href="css/sections/navbar.css">
   <link rel="stylesheet" href="css/sections/footer.css">
-  <link rel="stylesheet" href="css/pages/landing.css">
+  <link rel="stylesheet" href="css/pages/login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -34,18 +34,18 @@
     <div class="logo">
       <img src="images/icon.png" alt="Logo" class="logo-img">
     </div>
-
+    
     <div class="nav-links">
-      <a href="#" class="nav-link"><i class="fas fa-home"></i>Accueil</a>
+      <a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a>
       <a href="#" class="nav-link"><i class="fas fa-briefcase"></i>Réalisations</a>
       <a href="#" class="nav-link"><i class="fas fa-shop"></i>Boutique</a>
       <div class="mobile-auth-buttons">
-        <button class="button primary mobile-auth-button" onclick="window.location.href='login.html';">CONNEXION</button>
-        <button class="button secondary mobile-auth-button" onclick="window.location.href='register.html';">INSCRIPTION</button>
+        <button class="button primary mobile-auth-button">CONNEXION</button>
+        <button class="button secondary mobile-auth-button " onclick="window.location.href='register.html';">INSCRIPTION</button>
       </div>
     </div>
     <div class="auth-buttons">
-      <button class="button primary auth-button" onclick="window.location.href='login.html';">CONNEXION</button>
+      <button class="button primary auth-button">CONNEXION</button>
       <button class="button secondary auth-button" onclick="window.location.href='register.html';">INSCRIPTION</button>
     </div>
     <div class="burger">
@@ -54,53 +54,23 @@
       <div class="line"></div>
     </div>
   </nav>
-  <div class="hero">
-    <div class="hero-left">
-      <h1>MakeUI est une boutique <span class="important">innovante</span> pour vos sites web !</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
-      <div class="hero-buttons">
-        <button class="button primary hero-button" id="hero-button">
-          <span class="button-text">DECOUVRIR</span>
-          <span class="loader" style="display: none;"></span>
-        </button>
+  <div class="login-content">
+      <div class="login-card">
+        <div class="login-title">CONNEXION</div>
+        <div class="login-input">
+          <div class="login-input-title">Adresse email</div>
+          <input class="login-input-content" placeholder="example@gmail.com"></input>
+        </div>
+        <div class="login-input">
+          <div class="login-input-title" >Mot de passe</div>
+          <input class="login-input-content"placeholder="*************" ></input>
+        </div>
+        <div class="login-buttons">
+          <button class="button primary login-button">SE CONNECTER</button>
+          <button class="button secondary login-button" onclick="window.location.href='register.html';">S'INSCRIRE</button>
+        </div>
         
-        <button class="button secondary hero-button">A PROPOS</button>
       </div>
-    </div>
-    <div class="hero-right">
-      <img src="images/hero.png" alt="Sample Image">
-    </div>
-  </div>
-  <div class="tech-use">
-    <h3>Technologies Utilisées</h3>
-    <div class="tech-list">
-      <div class="tech-item"><img src="images/html.png" alt="Sample Image">HTML 5</div>
-      <div class="tech-item"><img src="images/css.png" alt="Sample Image">CSS 3</div>
-      <div class="tech-item"><img src="images/vuejs.png" alt="Sample Image">VUE JS</div>
-      <div class="tech-item"><img src="images/svelte.png" alt="Sample Image">SVELTE</div>
-    </div>
-  </div>
-  <div class="preview-list">
-    <div class="preview preview-1">
-      <div class="preview-image">
-        <img src="images/preview-1.png" alt="Sample Image">
-      </div>
-      <div class="preview-text">
-        <h4 class="preview-subtitle first">Subtitle 2</h4>
-        <h1 class="preview-title">SITE WEB ET DESIGN</h1>
-        <p class="preview-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin massa  dui, consequat nec nulla a, dapibus finibus est. Vivamus id quam ut dui  porttitor congue. In placerat convallis ipsum vitae consequat. Aliquam  tempus aliquet blandit. Nullam fermentum scelerisque magna, non molestie erat placerat eu. Sed orci ligula, dictum vitae purus ut, aliquet  volutpat tortor. Suspendisse vel magna dui.</p>
-      </div>
-    </div>
-    <div class="preview preview-2">
-      <div class="preview-text">
-        <h4 class="preview-subtitle second">Subtitle 2</h4>
-        <h1 class="preview-title">SITE WEB ET DESIGN</h1>
-        <p class="preview-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin massa  dui, consequat nec nulla a, dapibus finibus est. Vivamus id quam ut dui  porttitor congue. In placerat convallis ipsum vitae consequat. Aliquam  tempus aliquet blandit. Nullam fermentum scelerisque magna, non molestie erat placerat eu. Sed orci ligula, dictum vitae purus ut, aliquet  volutpat tortor. Suspendisse vel magna dui.</p>
-      </div>
-      <div class="preview-image">
-        <img src="images/preview-2.png" alt="Sample Image">
-      </div>
-    </div>
   </div>
   <footer>
     <div class="footer-items">
