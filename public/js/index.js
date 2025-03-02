@@ -33,6 +33,30 @@ function textTyppingEffect(element, text, i = 0) {
 }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Sélectionne tous les éléments à animer (les textes et images)
+    const elementsToAnimate = document.querySelectorAll('.preview-text, .preview-image img');
+
+    // Crée l'observateur avec un seuil de 50%
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Ajoute la classe "animate" qui déclenche l'animation en CSS
+                entry.target.classList.add('animate');
+                // Stoppe l'observation de cet élément si l'animation ne doit se faire qu'une seule fois
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
+
+    // Observe chacun des éléments sélectionnés
+    elementsToAnimate.forEach(element => {
+        observer.observe(element);
+    });
+});
+
 // Ajouter la classe important pour le mot "important"
 const style = document.createElement('style');
 style.innerHTML = '.hero-text .important { color: var(--primary-300); }';
@@ -66,22 +90,22 @@ document.addEventListener('click', (e) => {
     }
 });
 
-document.getElementById("hero-button").addEventListener("click", function() {
+document.getElementById("hero-button").addEventListener("click", function () {
     const buttonText = this.querySelector(".button-text");
     const loader = this.querySelector(".loader");
-  
+
     this.classList.add("clicked");
     buttonText.style.display = "none";
     loader.style.display = "block";
 
     setTimeout(() => {
-      setTimeout(() => {
-        buttonText.innerText = "DECOUVRIR";
-        buttonText.style.display = "block";
-        loader.style.display = "none";
-        this.classList.remove("clicked");
-      }, 1000);
+        setTimeout(() => {
+            buttonText.innerText = "DECOUVRIR";
+            buttonText.style.display = "block";
+            loader.style.display = "none";
+            this.classList.remove("clicked");
+        }, 1000);
     }, 300);
-  });
-  
+});
+
 

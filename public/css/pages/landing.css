@@ -1,4 +1,4 @@
-@import url(colors.css);
+@import url(../utils/colors.css);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .hero {
@@ -109,7 +109,7 @@
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
-  line-height: 112px; 
+  line-height: 112px;
   animation: slideIn 1s ease-out forwards;
 }
 
@@ -147,7 +147,7 @@
 .tech-item:hover {
   transform: scale(1.1);
   transition: all 0.5s;
-  cursor:default;
+  cursor: default;
 }
 
 .preview-list {
@@ -163,25 +163,16 @@
   gap: 5vw;
 }
 
-
-
 .preview-image img {
   width: 40vw;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: 1vw;
   transition: all 0.5s;
-
+  opacity: 0;
 }
 
-.preview-1 .preview-image img {
-  animation: slideInLeft 1s ease-out;
-}
-.preview-2 .preview-image img {
-  animation: slideInRight 1s ease-out;
-}
-
-.preview-image img:hover{
+.preview-image img:hover {
   transform: scale(0.9);
   transition: all 0.5s;
 }
@@ -189,13 +180,28 @@
 .preview-text {
   display: flex;
   flex-direction: column;
+  opacity: 0;
 }
 
-.preview-1 .preview-text {
-  animation: slideInRight 1s ease-in-out;
+.preview-1 .preview-text.animate {
+  animation: slideInRight 1s ease-in-out forwards;
 }
-.preview-2 .preview-text {
-  animation: slideInLeft 1s ease-in-out;
+
+.preview-2 .preview-text.animate {
+  animation: slideInLeft 1s ease-in-out forwards;
+}
+
+.preview-1 .preview-image img.animate {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.preview-2 .preview-image img.animate {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.animate {
+  opacity: 1;
+  /* Permet de s'assurer que l'élément devient visible immédiatement */
 }
 
 .preview-text h4 {
@@ -248,22 +254,23 @@
   .preview-list {
     gap: 100px;
   }
+
   .preview {
     flex-direction: column;
   }
-  
+
   .preview-image img {
     width: 75vw;
   }
-  
+
   .preview-text h4 {
     font-size: 18px;
   }
-  
+
   .preview-text h1 {
     font-size: 42px;
   }
-  
+
   .preview-text p {
     font-size: 14px;
     max-width: 75vw;
@@ -296,8 +303,9 @@
     width: 12rem;
     gap: 15px;
     font-size: 20px;
-  
+
   }
+
   .tech-list {
     gap: 30px;
   }
@@ -389,6 +397,7 @@
     opacity: 1;
   }
 }
+
 @keyframes slideInRight {
   from {
     transform: translateX(100%);
@@ -400,6 +409,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -411,6 +421,11 @@
 }
 
 @keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
