@@ -1,4 +1,4 @@
-@import url(colors.css);
+@import url(../utils/colors.css);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
@@ -33,7 +33,7 @@
     margin-top: 40px;
 }
 
-.login-input {  
+.login-input {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -134,4 +134,3 @@
         margin: 200px 40px;
     }
 }
-
