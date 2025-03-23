@@ -1,0 +1,104 @@
+@import url(../utils/colors.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.carousel {
+    position: relative;
+    margin: 50px auto;
+    margin-top: 100px;
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: var(--primary-300);
+    cursor: pointer;
+    user-select: none;
+}
+
+.offer {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.offer-content {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.offer-item {
+    min-width: 100%;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.badge {
+    background-color: var(--yellow-300);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: var(--primary-300);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: var(--primary-300);
+}
+
+
+.offer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.offer-content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.offer-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
