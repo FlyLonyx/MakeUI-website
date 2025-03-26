@@ -18,3 +18,20 @@ function nextSlide() {
 function prevSlide() {
     showSlide(currentSlide - 1);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navDots = document.querySelectorAll(".nav-dot");
+
+    navDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            // Supprimer la classe "active" de tous les points
+            navDots.forEach((item) => item.classList.remove("active"));
+
+            // Ajouter la classe "active" au point cliqué
+            dot.classList.add("active");
+
+            // Simuler ici les changements de produit (si nécessaire)
+            console.log(`Le produit ${index + 1} est maintenant actif.`);
+        });
+    });
+});
