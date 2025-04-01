@@ -1,3 +1,6 @@
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
 let currentSlide = 0;
 
 function showSlide(slideIndex) {
@@ -9,6 +12,20 @@ function showSlide(slideIndex) {
 
     // Mise à jour de la position
     offers.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+burger.addEventListener('click', toggleMenu);
+
+document.addEventListener('click', (e) => {
+    if (!burger.contains(e.target) && !navLinks.contains(e.target)) {
+        burger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+});
+
+function toggleMenu() {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
 }
 
 function nextSlide() {

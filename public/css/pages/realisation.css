@@ -79,7 +79,7 @@
 
 .projet-image img {
     width: 60vh;
-    height: 20vw;
+    height: 20rem;
 }
 
 .projet_first p {
@@ -113,24 +113,27 @@
 .projet-infomation-label{
     border-radius: 5px 5px 5px 5px;
     background-color: #F4AE44;
-    width: 8vw;
+    width: 7rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
     
 }
 
 .projet-infomation-label p {
     color: #fff;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: 700;
 }
 
 .projet-image img:hover {
-    filter: blur(5px); /* Ajoute un flou de 5px */
-    transition: filter 0.3s ease-in-out; /* Animation fluide */
+    scale: 1.05;
+    transition: all 0.3s ease-in-out; /* Animation fluide */
 }
 
 .projet-image img {
-    filter: blur(0px); /* Aucun flou au départ */
-    transition: filter 0.3s ease-in-out; /* Animation fluide */
+    transition: all 0.3s ease-in-out; /* Animation fluide */
 }
 
 @media (max-width: 768px) {
